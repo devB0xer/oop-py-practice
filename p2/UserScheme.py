@@ -1,0 +1,2 @@
+class UserScheme:
+    pass
