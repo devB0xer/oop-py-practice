@@ -1,0 +1,7 @@
+1.
+    delattr(object, 'attr')
+    setattr(object, 'attr', value)
+    hasattr(object, 'attr')
+    getattr(object, 'attr')
+
+2. объект класса - экземпляр класса; класс - "чертеж", определение того какими свойствами и методами должен обладать объект
