@@ -8,7 +8,7 @@ class LinkedList:
 
     def len(self):
         obj = self.start
-        count = 0 # [iter:count] 1:1 2:2
+        count = 0 
         while True:
             count += 1
             if obj == self.end:
@@ -21,11 +21,30 @@ class LinkedList:
         while True:
             if obj.data == data:
                 return obj
-            else:
+            elif obj.next:
                 obj = obj.next
+            else:
+                return 'not found'
 
     
     def append(self, obj):
-        pass
+        self.end.next = obj
+        self.end = obj
+
     def remove(self, index):
-        pass
+        obj = self.start
+        for obj_i in range(index):
+            if index == 0:
+                self.start = self.start.next
+                break
+            elif obj_i == (index - 1) and obj != self.end:
+                if obj.next == self.end:
+                    self.end = obj
+                obj.next = obj.next.next
+                break
+            elif obj == self.end:
+                print('out of range')
+                break
+            else:
+                obj = obj.next
+
