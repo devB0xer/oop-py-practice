@@ -12,12 +12,12 @@ list = LinkedList(n1, n3)
 print(list.len())
 
 # search
-# print(list.search(3).__dict__)
+print(list.search(3).__dict__)
 
 #append
-# n4 = Node(4)
-# list.append(n4)
-# print(list.len(), list.search(4).data)
+n4 = Node(4)
+list.append(n4)
+print(list.len(), list.search(4).data)
 
 #remove
 list.remove(2)
